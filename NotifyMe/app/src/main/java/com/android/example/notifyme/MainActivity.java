@@ -196,8 +196,10 @@ public class MainActivity extends AppCompatActivity {
                 .setContentTitle(getString(R.string.notification_title))
                 .setContentText(getString(R.string.notification_text))
                 .setSmallIcon(R.drawable.ic_android)
-                .setAutoCancel(true).setContentIntent(notificationPendingIntent)
+                .setAutoCancel(true)
+                .setContentIntent(notificationPendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setDeleteIntent(notificationPendingIntent) //added cancel feature or swipe away PN
                 .setDefaults(NotificationCompat.DEFAULT_ALL);
         return notifyBuilder;
     }
