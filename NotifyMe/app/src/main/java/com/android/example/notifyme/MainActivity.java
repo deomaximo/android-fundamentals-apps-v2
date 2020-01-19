@@ -218,10 +218,21 @@ public class MainActivity extends AppCompatActivity {
         // method.
         NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
 
+        // PN - Previous code
         // Update the notification style to BigPictureStyle.
-        notifyBuilder.setStyle(new NotificationCompat.BigPictureStyle()
-                .bigPicture(androidImage)
+//        notifyBuilder.setStyle(new NotificationCompat.BigPictureStyle()
+//                .bigPicture(androidImage)
+//                .setBigContentTitle(getString(R.string.notification_updated)));
+        notifyBuilder.setStyle(new NotificationCompat.InboxStyle()
+                .addLine("Here is the first one")
+                .addLine("This is the second one")
+                .addLine("Yah last one")
+                .setSummaryText("+1 more")
                 .setBigContentTitle(getString(R.string.notification_updated)));
+
+        // PN - Homework
+        // Change the update notification to use the InboxStyle
+        // expand layout instead of a BigPictureStyle
 
         // Deliver the notification.
         mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
