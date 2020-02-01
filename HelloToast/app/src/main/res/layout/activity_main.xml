@@ -33,8 +33,6 @@
         android:onClick="showToast"
         android:text="@string/button_label_toast"
         android:textColor="@android:color/white"
-
-
         />
 
 
@@ -46,16 +44,14 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:layout_weight="1"
         android:background="#FFFF00"
         android:gravity="center_vertical"
-        android:layout_weight="1"
         android:text="@string/count_initial_value"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="160sp"
         android:textStyle="bold"
-
-
         />
 
     <Button
@@ -69,8 +65,6 @@
         android:onClick="countUp"
         android:text="@string/button_label_count"
         android:textColor="@android:color/white"
-
-
         />
 
 </LinearLayout>
